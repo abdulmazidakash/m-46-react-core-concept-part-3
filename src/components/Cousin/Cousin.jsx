@@ -1,10 +1,16 @@
+import Friend from "../Friend/Friend";
+import Special from "../Special/Special";
 
 
-const Cousin = ({name}) => {
+const Cousin = ({name, asset}) => {
 	return (
 		<div>
-			<h1>Cousin</h1>
+			<h2>Cousin</h2>
 			<p>{name}</p>
+			<section>
+				{asset && <Special asset={asset} ></Special>}
+				{name=== 'Rubaiya' && <Friend></Friend>}
+			</section>
 		</div>
 	);
 };
